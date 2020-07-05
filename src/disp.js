@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card'
 import { Button} from 'react-bootstrap';
-
+import View from './view';
 class Disp extends Component {
 
     constructor(){
@@ -11,6 +11,20 @@ class Disp extends Component {
         loading:true
     }
 }
+
+                clickView=event=>{
+                    event.preventDefault()
+                    const {resturants}=this.state
+                    const User={
+                    resturants
+                    };
+                    return <View/>
+                }
+
+
+
+
+
     async componentDidMount() {
         const { lat, long } = this.props;
         const url = `https://developers.zomato.com/api/v2.1/search?lat=${lat}&lon=${long} `;
@@ -53,7 +67,7 @@ class Disp extends Component {
                                                 User Rating :<b>{shop.restaurant.user_rating.aggregate_rating}</b>
                                             </Card.Text>
                                             <hr/>
-                                            <Button variant="primary" >Order Now</Button>
+                                             <button onclick={this.clickView}><b>Quick View !</b></button>
                                             </Card.Body>
                                             <br/>
                                         </Card>

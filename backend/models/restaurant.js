@@ -1,0 +1,44 @@
+const mongoose=require('mongoose');
+const restSchema=new mongoose.Schema({
+    restName:{
+        type:String,
+        trim:true,
+        required:true
+    },
+    address:{
+        type:String,
+        trim:true,
+        required:true
+    },
+    City:{
+        type:String,
+        trim:true,
+        required:true
+    },
+    state:{
+        type:String,
+        trim:true,
+        required:true
+    },
+    firstName:{
+        type:String,
+        trim:true,
+        requied:true
+    },
+    lastName:{
+        type:String,
+        trim:true,
+        required:true
+    },
+    number:{
+        type:String,
+        trim:true,
+        required:true
+    },
+    email:{
+        type:String,
+        trim:true,
+        required:true
+    },
+})
+module.exports=mongoose.model("Restaurant",restSchema);

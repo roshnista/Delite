@@ -9,7 +9,7 @@ import Policy from './Policy.js';
 import Restaurant from './Restaurant.js';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import FooterPage from './FooterPage.js';
-
+import View from './view.js';
 class App extends Component
   {
   render()
@@ -26,6 +26,7 @@ class App extends Component
       <Route exact path='/contact' render={()=><Contact/>}/>
       <Route exact path='/policy' render={()=><Policy/>}/>
       <Route exact path='/add' render={()=><Restaurant/>}/>
+      <Route exact path='/view' render={()=><View/>}/>
       
       <FooterPage/>
       </Router>
